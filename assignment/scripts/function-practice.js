@@ -125,7 +125,7 @@ function findDigits(number) {
   if (number < 0) {
     number *= -1;
   }
-  if (number < 1) {
+  if (number % 1 !== 0) {
     return "Number must be an integer!";
   }
   if (number < 10) {
