@@ -24,7 +24,7 @@ console.log(helloName('Solomon'))
 function addNumbers( firstNumber, secondNumber ) {
   return firstNumber + secondNumber;
 }
-let num1 = 2;
+let num1 = -10;
 let num2 = 3;
 console.log(`Add numbers (${num1}, ${num2}):`, addNumbers(num1, num2));
 
@@ -89,7 +89,7 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 // 9. Function to return the sum of all numbers in an array
 function sumAll( array ) {
   let sum = 0
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     sum += array[i];
   }
   // TODO: loop to add items
@@ -100,7 +100,16 @@ console.log(`Sum all indices of [${arrayNums}]: `, sumAll(arrayNums));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-
+function allPositive( array ) {
+  let positives = [];
+  for (let i = 0; i < array.length; i ++) {
+    if (array[i] > 0) {
+      positives.push(array[i]);
+    }
+  }
+  return positives;
+}
+console.log(`Returning only positive numbers from [${arrayNums}]:`, allPositive(arrayNums));
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
