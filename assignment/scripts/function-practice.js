@@ -115,3 +115,31 @@ console.log(`Returning only positive numbers from [${arrayNums}]:`, allPositive(
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+//Edabit challenge: https://edabit.com/challenge/yFJzLfYghz7ZtsyAN
+//Find Number of Digits in Number
+let bigNumber = -34567;
+
+function findDigits(number) {
+  let digits = 0;
+  let overTen = true;
+  if (number < 0) {
+    number *= -1;
+  }
+  if (number < 1) {
+    return "Number must be an integer!";
+  }
+  if (number < 10) {
+    return 1;
+  }
+  while (overTen) {
+    digits ++;
+    if (number < 10) {
+      overTen = false;
+    } else {
+      number /= 10;
+    }
+  }
+  return digits;
+}
+
+console.log(`Finding digits in ${bigNumber}:`, findDigits(bigNumber));
